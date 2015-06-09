@@ -4,11 +4,17 @@ from django.db import models
 # class nameOfModel(models.Model): ....
 
 
-def Menu(models.Model):
-    pass
-
-def FoodItem(models.Model):
-    pass
-
-def Review(models.Model):
-    pass
+class Menu(models.Model):
+    title = models.CharField(max_length=200)
+class FoodItem(models.Model):
+    type = ""
+    dishname = models.CharField(max_length=200)
+    #reviews =
+    def getAverage(self):
+        return 1
+    def getSimilar(self):
+        return 1
+class Review(models.Model):
+    #reviewer = models.CharField(max_length=200)
+    rating = models.IntegerField()
+    comment = models.CharField(max_length=500)
