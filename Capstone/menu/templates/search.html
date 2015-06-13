@@ -6,10 +6,17 @@
     <h2> Search results for</h2>
     <p> "{{ GET }}"</p>
     {% if menu %}
-
+        <h3> Menus </h3>
+        {% for m in menu %}
+           <a href="/menus/{{ m.id }}">{{ m.title }}</a>
+        {% endfor %}
     {% endif %}
-    {% if food %}
 
+    {% if food %}
+        <h3> Food </h3>
+        {% for k in food %}
+            <a href="/menus/food/{{ k.id }}"> {{ k.name }}</a>
+        {% endfor %}
     {% endif %}
 {% else %}
     <p> Unable to search for empty strings. </p>
