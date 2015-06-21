@@ -5,20 +5,30 @@
 {% if menus %}
     <ul id="menu">
     {%  for m in menus %}
-        <li><a href="/menus/{{ m.id }}">{{ m.title }}</a></li>
+        <li>
+            <img src="/static/{{ m.logo }}"/>
+            <a href="/menus/{{ m.id }}">{{ m.title }}</a>
+        </li>
     {% endfor %}
     </ul>
 {% endif %}
 
     {% if menu %}
-       <h3> {{ menu.title }}</h3>
-        <ul id="menu">
-        {% if food %}
-            {%  for f in food %}
-             <li><a href="/menus/food/{{ f.id }}">  {{ f.name }}</a></li>
-            {% endfor %}
-        {% endif %}
-        </ul>
+
+        <h3> {{ menu.title }}</h3><img src="/static/{{ menu.logo }}"><!-- We should expect an image for each menu-->
+        <p>Menu Rating: <img src="/static/assets/images/{{ avg }}.png" alt="{{ rating }}"/></p><!--Total Average Menu Rating-->
+        <ul id="menu"> </ul>
+         {% if food %}
+             {%  for f in food %}
+                    <li>{{f.type}}<a href="/menus/food/{{ f.id }}">{{ f.name }}</a> </li>
+                    {% if f.logo != 'media/default.png' %} <!-- We don't want to display a blank image-->
+                        <img src="/static/{{ f.logo }}">
+                    {% endif %}
+
+                    <p>Rating: <img src="/static/assets/images/{{ f.average }}.png" alt="{{ rating }}"/></p>
+             {% endfor %}
+         {% endif %}
+
     {% endif %}
 
 {% endblock %}
