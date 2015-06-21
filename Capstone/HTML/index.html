@@ -1,19 +1,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" href="assets/custom_style.css">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>index</title>
     <title> Menu </title>
     <!-- Import styles and scripts-->
-    <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css">
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.css">
+    <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="assets/custom_style.css">
     <link rel="stylesheet" href="SpryAssets/SpryMenuBarHorizontal.css">
     
     <script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
-    <!-- Latest compiled and minified JavaScript -->
+    <!-- Latest compiled and JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
     <script src="assets/jquery/jquery.js" type="text/javascript"></script>
     <script src="assets/main.js" type="text/javascript"></script>
@@ -52,17 +53,22 @@
     <tr>
       <td>&nbsp;</td>
       <td>
-      	<!-- Link or button to toggle dropdown -->
-      	<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-        	<li class="dropdown-submenu">
-        		<a tabindex="-1" href="#">Action</a></li>
-        			<ul class="dropdown-menu">
-        				<a tabindex="-1" href="#">Action.1</a></li>
-        	<li><a tabindex="-1" href="#">Another action</a></li>
-        	<li><a tabindex="-1" href="#">Something else here</a></li>
-        	<li class="divider"></li>
-        	<li><a tabindex="-1" href="#">Separated link</a></li>
-      	</ul>
+      	<ul class="nav nav-tabs">
+          <li class="active">
+    		<a href="index.html">Home</a>
+		  </li>
+  		  <li><a href="Menu.html">Menu</a></li>
+  		  <li><a href="Review.html">Review</a></li>
+      	  <li class="dropdown">
+          	<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      Dropdown <span class="caret"></span>
+          	</a>
+        <ul class="dropdown-menu">
+        	
+          <!-- links -->
+        </ul>
+      </li>
+    </ul>
       </td>
       <td>&nbsp;</td>
     </tr>
@@ -73,8 +79,8 @@
 </div>
 <table class="MapTable"width="100%" border="0">
   <tr>
-    <td width="190" align="right"><p><strong>Restaurant:</strong></p></td>
-    <td width="698" align="center">
+    <td width="25%" align="right"><p><strong>Search:</strong></p></td>
+    <td width="55%" align="center">
         <div class="row">
             <div class="col-xs-12 .col-sm-6 .col-lg-8">
                 <div class="input-group">
@@ -85,7 +91,7 @@
                 </div><!-- /input-group -->
             </div><!-- /col-xs-12 .col-sm-6 .col-lg-8 -->
     	</div><!-- /.row -->
-    <td width="126" align="left"></td>
+    <td width="20%" align="left"></td>
   </tr>
   <tr>
     <td colspan="3" align="center"><iframe width="500"  height="400" frameborder="0" style="border:0"
